@@ -1,0 +1,5 @@
+---
+- name: Create ~/Projects directory
+  file:
+    path: ~/Projects
+    state: directory

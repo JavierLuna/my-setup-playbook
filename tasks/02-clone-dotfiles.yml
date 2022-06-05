@@ -1,0 +1,15 @@
+---
+#- name: Clone dotfiles repo to ~/.dotfiles
+#  git:
+#    repo: "{{ dotfiles_remote }}" 
+#    dest: "{{ dotfiles_local }}"
+
+- name: Check if 'tasks' directory exists within dotfile repo
+  stat:
+    path: "{{ dotfiles_local }}/tasks"
+  register: dottaskfolder
+
+- name: Include tasks in dotfiles repository
+  include_tasks: "{{ item }}"
+  with_fileglob: "{{ dotfiles_local }}/tasks/*.yml"
+  when: dottaskfolder.stat.exists and dottaskfolder.stat.isdir

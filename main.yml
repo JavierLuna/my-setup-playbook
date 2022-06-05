@@ -1,0 +1,10 @@
+---
+- hosts: all
+
+  vars_files:
+    - config.yml
+
+  tasks:
+    - import_tasks: tasks/01-install-packages.yml
+    - import_tasks: tasks/02-clone-dotfiles.yml
+    - import_tasks: tasks/03-misc.yml

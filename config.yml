@@ -1,0 +1,48 @@
+---
+homebrew_packages:
+  - ansible
+  - curl
+  - gcc
+  - git
+  - go
+  - htop
+  - neovim
+  - nmap
+  - node@16
+  - macchina
+  - make
+  - python@3.10
+  - ripgrep
+  - stow
+  - sqlite
+  - tmux
+  - wrk
+  - zsh
+
+homebrew_casks:
+  - alacritty
+  - balenaetcher
+  - brave-browser
+  - docker
+  - firefox
+  - franz
+  - postman
+  - pycharm
+  - qbittorrent
+  - spotify
+  - visual-studio-code
+  - vlc
+
+homebrew_linked:
+  - node@16
+  - python@3.10
+
+npm_packages:
+  - pyright
+  - typescript-language-server
+  - '@fsouza/prettierd'
+  - eslint_d
+
+
+dotfiles_remote: 'git@github.com:JavierLuna/dots.git'
+dotfiles_local: ~/.dotfiles

@@ -1,0 +1,34 @@
+---
+- name: Install homebrew packages
+  community.general.homebrew:
+    name: "{{ homebrew_packages }}"
+    state: present
+
+- name: Linking homebrew packages
+  community.general.homebrew:
+    name: "{{ homebrew_linked }}"
+    state: linked
+
+- name: Install homebrew casks
+  community.general.homebrew_cask:
+    name: "{{ homebrew_casks }}"
+    state: present
+
+- name: Install global NPM packages
+  community.general.npm:
+    name: "{{ item }}"
+    global: yes
+  loop: "{{ npm_packages }}"
+
+- name: Clone FZF
+  git:
+    repo: 'https://github.com/junegunn/fzf.git'
+    dest: ~/.fzf
+    depth: 1
+
+- name: Install FZF
+  shell:
+    cmd: ~/.fzf/install --bin --key-bindings --completion --no-bash --no-fish
+    creates: ~/.fzf/bin/fzf
+
+
