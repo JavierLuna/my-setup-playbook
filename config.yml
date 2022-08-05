@@ -26,6 +26,7 @@ homebrew_casks:
   - docker
   - firefox
   - franz
+  - gimp
   - postman
   - pycharm
   - qbittorrent
