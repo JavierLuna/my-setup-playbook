@@ -20,6 +20,10 @@
     global: yes
   loop: "{{ npm_packages }}"
 
+- name: Install global pip packages
+  pip:
+    name: "{{ pip_packages }}"
+
 - name: Clone FZF
   git:
     repo: 'https://github.com/junegunn/fzf.git'

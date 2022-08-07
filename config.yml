@@ -45,6 +45,11 @@ npm_packages:
   - '@fsouza/prettierd'
   - eslint_d
 
+pip_packages:
+  - black
+  - flake8
+  - mypy
+
 
 dotfiles_remote: 'git@github.com:JavierLuna/dots.git'
 dotfiles_local: ~/.dotfiles
