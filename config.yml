@@ -15,6 +15,7 @@ homebrew_packages:
   - ripgrep
   - stow
   - sqlite
+  - swiftformat
   - tmux
   - wrk
   - zsh
